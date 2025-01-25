@@ -1,0 +1,29 @@
+<h1>My Domains</h1>
+<section role="main">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Expiration</th>
+        <th>Renewal Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let domain of DomainList">
+        <td>
+          {{domain.name}}
+        </td>
+        <td>
+          {{domain.expiration}}
+        </td>
+        <td>
+          {{domain.renewal_price | currency: 'USD':true: '1.2-2'}}/yr
+        </td>
+        <td>
+          <a (click)="details(domain.id)">details </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

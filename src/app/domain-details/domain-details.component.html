@@ -1,0 +1,33 @@
+<h1>
+ {{selectedData[0].name}}
+</h1>
+<div class="form">
+  <div class="form-group">
+    <label>ID:</label>
+    {{selectedData[0].id}}
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+    {{selectedData[0].name}}
+  </div>
+  <div class="form-group">
+    <label>Expiration:</label>
+    {{selectedData[0].expiration}}
+  </div>
+  <div class="form-group">
+    <label>Auto Renew:</label>
+    {{ selectedData[0].auto_renew ? 'Yes' : 'No' }}
+  </div>
+  <div class="form-group">
+    <label>Domain Privacy:</label>
+    {{ selectedData[0].domain_privacy ? 'Yes' : 'No' }}
+    
+  </div>
+  <div class="form-group">
+    <label>Renewal Price:</label>
+    {{formattedRenewalPrice}}
+  </div>
+  <div class="form-actions">
+    <button type="button"  (click)="goBackToList()">Back to the list</button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+@import "node_modules/h8k-design/lib/index";
+
+$viewport-grid-size: 25;
+
+app-root {
+  @extend .layout-column, .align-items-center, .mx-auto, .pa-#{$viewport-grid-size * 2};
+}
